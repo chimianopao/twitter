@@ -9,7 +9,6 @@ export class TweetActionsService {
   private tweets: Tweet[] = [];
 
   constructor() {
-    // Load tweets from localStorage on service initialization
     this.tweets = this.getTweets();
   }
 
@@ -19,7 +18,6 @@ export class TweetActionsService {
     return storedTweets ? JSON.parse(storedTweets) : [];
   }
 
-  // Store tweets in localStorage
   storeTweetsInLocalStorage(tweets: Tweet[]): void {
     localStorage.setItem(this.localStorageKey, JSON.stringify(tweets));
   }

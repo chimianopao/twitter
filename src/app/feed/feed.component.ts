@@ -3,15 +3,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { TweetActionsService } from '../tweet-actions.service';
 import { Tweet } from '../tweet.model';
-import { TweetService } from '../tweet.service';
-
-// interface Tweet {
-//   id: number;
-//   content: string;
-//   author: string;
-//   likes: number;
-//   comments: number;
-// }
 
 @Component({
   selector: 'app-feed',
@@ -32,6 +23,10 @@ export class FeedComponent {
   }
 
   createTweet() {
+    if(this.tweetContent.length > 280){
+      alert("Tweet limit is 280 characters.");
+      return;
+    }
     const loggedInUser = this.authService.getLoggedInUser();
     if (this.tweetContent.trim() && loggedInUser) {
       const newTweet: Tweet = {

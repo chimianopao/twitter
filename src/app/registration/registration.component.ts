@@ -23,10 +23,8 @@ export class RegistrationComponent{
         password: this.password
       };
 
-      // Register the new user through the AuthService
       this.authService.registerUser(newUser);
 
-      // Redirect to the login page after successful registration
       this.router.navigate(['/login']);
     }
   }

@@ -9,7 +9,6 @@ export class AuthService {
   constructor(private router: Router) { }
 
   registerUser(user: any) {
-    // Assuming the users are stored in an array in localStorage
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
@@ -24,7 +23,6 @@ export class AuthService {
     const user = this.getUserByEmail(email);
 
     if (user && user.password === password) {
-      // Successful login, set the logged-in user in localStorage
       localStorage.setItem(this.currentUser, JSON.stringify(user));
       return true;
     } else {
@@ -33,13 +31,11 @@ export class AuthService {
   }
 
   getLoggedInUser(): any {
-    // Retrieve the logged-in user from localStorage
     const userString = localStorage.getItem(this.currentUser);
     return userString ? JSON.parse(userString) : null;
   }
 
   logout() {
-    // Clear the logged-in user from localStorage on logout
     localStorage.removeItem(this.currentUser);
     
   }

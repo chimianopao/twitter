@@ -19,10 +19,8 @@ export class LoginComponent {
     const loggedIn = this.authService.login(this.email, this.password);
 
     if (loggedIn) {
-      // Successful login, navigate to the feed page
       this.router.navigate(['/feed']);
     } else {
-      // Display an error message for unsuccessful login
       this.errorMessage = 'Invalid email or password';
     }
   }

@@ -7,7 +7,6 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FeedComponent } from './feed/feed.component';
-import { TweetComponent } from './tweet/tweet.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -16,8 +15,7 @@ import { FormsModule } from '@angular/forms';
     RegistrationComponent,
     LoginComponent,
     ProfileComponent,
-    FeedComponent,
-    TweetComponent
+    FeedComponent
   ],
   imports: [
     BrowserModule,
