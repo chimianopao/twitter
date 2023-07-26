@@ -14,7 +14,7 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         // Check the current route to hide/show the links and button
-        this.showLinks = !['/login', '/registration'].includes(event.url);
+        this.showLinks = !['/login', '/registration', '/'].includes(event.url);
       }
     });
   }
