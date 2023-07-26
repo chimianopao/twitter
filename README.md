@@ -1,3 +1,10 @@
+Release 1.0:
+Can creater user and login;
+Can create tweets and like them;
+All users tweets will be on feed page;
+Profile page show only the user tweets;
+
+
 # Twitter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
