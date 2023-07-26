@@ -1,0 +1,46 @@
+/* Container for tweet cards */
+.tweets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align tweet cards to the center horizontally */
+    max-width: 50%; /* Limit the container to half of the page width */
+    margin: 0 auto; /* Center the container on the page */
+  }
+  
+  /* Styling for individual tweet cards */
+  .tweet-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 45%; /* Control the width of each tweet card */
+  }
+  
+  .tweet-content {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .author {
+    color: #007bff;
+  }
+  
+  .likes,
+  .comments {
+    color: #555;
+    margin-right: 10px;
+  }
+  
+  .interaction {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Clearfix to handle wrapping of tweet cards in a responsive manner */
+  .tweets-container::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  

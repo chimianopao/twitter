@@ -1,0 +1,30 @@
+<h1>Profile</h1>
+
+<div class="profile-info">
+  <div class="avatar">
+    <!-- You can display the user's profile picture here if available -->
+  </div>
+  <div class="user-details">
+    <h2>{{ currentUser.name }}</h2>
+    <p>Email: {{ currentUser.email }}</p>
+    <p>Number of Followers: <!-- Add the number of followers here --></p>
+    <p>Bio: <!-- Add the user's bio here --></p>
+  </div>
+</div>
+
+<div class="profile-tweets">
+  <h3>My Tweets</h3>
+  <div *ngFor="let tweet of userTweets" class="tweet-card">
+    <div class="tweet-content">
+      <div class="author">{{ tweet.author }}</div>
+      <div class="content">{{ tweet.content }}</div>
+    </div>
+    <div class="interaction">
+      <button class="like-button" (click)="onLike(tweet)">
+        <i class="fas fa-heart"></i> Like
+      </button>
+      <span class="likes">Likes: {{ tweet.likes }}</span>
+      <span class="comments">Comments: {{ tweet.comments }}</span>
+    </div>
+  </div>
+</div>

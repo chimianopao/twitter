@@ -1,0 +1,24 @@
+<h1>Feed</h1>
+
+<!-- New Tweet Form -->
+<div class="tweet-form">
+  <textarea [(ngModel)]="tweetContent" placeholder="What's happening?"></textarea>
+  <button (click)="createTweet()">Tweet</button>
+</div>
+
+<!-- Tweet Feed -->
+<div class="feed">
+  <div *ngFor="let tweet of tweets" class="tweet-card">
+    <div class="tweet-content">
+      <div class="author">{{ tweet.author }}</div>
+      <div class="content">{{ tweet.content }}</div>
+    </div>
+    <div class="interaction">
+      <button class="like-button" (click)="onLike(tweet)">
+        <i class="fas fa-heart"></i> Like
+      </button>
+      <span class="likes">Likes: {{ tweet.likes }}</span>
+      <span class="comments">Comments: {{ tweet.comments }}</span>
+    </div>
+  </div>
+</div>
